@@ -46,4 +46,8 @@ class CrudUserController extends Controller
         return response()->json(['status' =>'Professor created successfully!' ], 200);
     }   
    
+    public function RegisterStudentExcel(Request $request)
+    {
+        return response()->json("Hi");
+    }
 }

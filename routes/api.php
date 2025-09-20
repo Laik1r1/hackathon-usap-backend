@@ -4,6 +4,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CrudUserController;
+use App\Http\Controllers\ChatPDFController;
+
+Route::post("/registerExcel",[CrudUserController::class,'RegisterStudentExcel']);
+
+Route::post('/chatpdf/makeQuestion', [ChatPDFController::class, 'MakeQuestion']);
+Route::post('/chatpdf/upload-url', [ChatPdfController::class, 'uploadUrl']);
 
 Route::middleware('auth:jwt')->group(function () {
     Route::post('/logout', [LoginController::class, 'Logout']);

@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'chatpdf' => [
+    'base_url' => env('CHATPDF_BASE_URL'),
+    'api_key'  => env('CHATPDF_API_KEY'),
+],
+
 ];
